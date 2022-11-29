@@ -13,7 +13,9 @@ public class ClienteService {
 	private ClienteRepository clienteRepository;
 	
 	public Cliente getByCodigo(Long codigo) {
-		return clienteRepository.findById(codigo).get();
+		Cliente cliente = clienteRepository.findById(codigo).get();
+        cliente.setNome(cliente.getNome() + " instancia 2");
+		return cliente;
 	}
 
 	

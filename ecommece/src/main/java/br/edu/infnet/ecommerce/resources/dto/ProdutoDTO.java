@@ -4,6 +4,10 @@ public class ProdutoDTO {
 
 	private Integer codigo;
 	
+	private String nome;
+	
+	private Double preco;
+	
 	private Integer quantidade;
 
 	public Integer getCodigo() {
@@ -26,5 +30,21 @@ public class ProdutoDTO {
 	public String toString() {
 		return "ProdutoDTO [codigo=" + codigo + ", quantidade=" + quantidade + "]";
 	}
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(Double preco) {
+        this.preco = preco;
+    }
 	
 }

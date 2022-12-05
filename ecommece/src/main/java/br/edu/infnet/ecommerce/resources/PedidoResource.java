@@ -14,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 import br.edu.infnet.ecommerce.clients.ProdutoClient;
 import br.edu.infnet.ecommerce.resources.dto.ClienteDTO;
 import br.edu.infnet.ecommerce.resources.dto.PedidoDTO;
+import br.edu.infnet.ecommerce.resources.dto.PedidoResponseDTO;
 import br.edu.infnet.ecommerce.resources.dto.ProdutoCatalogoDTO;
 
 @RestController
@@ -30,7 +31,7 @@ public class PedidoResource {
 	private ProdutoClient produtoClient;
 	
 	@PostMapping
-	public void efetuaPedido(@RequestBody PedidoDTO pedidoDTO) {
+	public PedidoResponseDTO efetuaPedido(@RequestBody PedidoDTO pedidoDTO) {
 		
 		ClienteDTO clienteDTO = restTemplate.getForObject(clienteApiUrl+
 					pedidoDTO.getClienteId(), ClienteDTO.class);
@@ -39,6 +40,8 @@ public class PedidoResource {
 		
 		ResponseEntity<List<ProdutoCatalogoDTO>> produtos = produtoClient.getProdutos();
 		System.out.println("foi " + produtos.getBody());
+		
+		return new PedidoResponseDTO(clienteDTO, produtos.getBody());
 		
 	}
 

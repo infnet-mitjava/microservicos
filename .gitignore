@@ -7,3 +7,9 @@ eureka/.mvn
 eureka/target/
 catalogo/.mvn
 catalogo/target/
+configserver/bin/
+configserver/settings/
+configserver/gradle/
+configserver/.gradle/
+configserver/.classpath
+configserver/.project

@@ -1,4 +1,4 @@
-package br.edu.infnet.configserver;
+package br.edu.infnet.cs;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
 @EnableConfigServer
-public class ConfigserverApplication {
+public class CsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ConfigserverApplication.class, args);
+		SpringApplication.run(CsApplication.class, args);
 	}
 
 }

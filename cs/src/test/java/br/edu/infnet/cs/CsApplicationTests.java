@@ -1,10 +1,10 @@
-package br.edu.infnet.configserver;
+package br.edu.infnet.cs;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConfigserverApplicationTests {
+class CsApplicationTests {
 
 	@Test
 	void contextLoads() {

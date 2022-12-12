@@ -13,3 +13,5 @@ configserver/gradle/
 configserver/.gradle/
 configserver/.classpath
 configserver/.project
+gateway/.mvn
+gateway/target/
